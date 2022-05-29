@@ -2,7 +2,7 @@ import React from 'react';
 import {Card, Layout} from 'antd';
 import {Header, Content} from 'antd/lib/layout/layout';
 import
-TreeSelectInTableInsideForm from './conponents/TreeSelectInTableInsideForm';
+TreeSelectInTableInsideForm from './conponents/RadioTableForm';
 
 /**
  * App
