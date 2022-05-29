@@ -1,8 +1,6 @@
 import React from 'react';
-import {Card, Layout} from 'antd';
-import {Header, Content} from 'antd/lib/layout/layout';
-import
-TreeSelectInTableInsideForm from './conponents/RadioTableForm';
+import {Anchor, Card, Layout, Typography} from 'antd';
+import TreeSelectInTableInsideForm from './conponents/RadioTableForm';
 
 /**
  * App
@@ -11,14 +9,28 @@ TreeSelectInTableInsideForm from './conponents/RadioTableForm';
 function App() {
   return (
     <Layout className="layout">
-      <Header>
+      <Layout.Header>
         <div className="logo" />
-        <Content style={{padding: '5rem 50px'}}>
-          <Card className="test-1">
+      </Layout.Header>
+      <Layout>
+        <Layout.Sider style={{background: '#fff'}}>
+          <Anchor>
+            <Anchor.Link href="#radio-inside-each-table-cell" title="Radio inside each Table cell" />
+          </Anchor>
+        </Layout.Sider>
+        <Layout.Content style={{padding: '0 50px'}}>
+          <Card
+            title={
+              <Typography.Title level={5}>
+                <Typography.Link href={'#radio-inside-each-table-cell'}>
+                Radio inside each Table cell
+                </Typography.Link>
+              </Typography.Title>}
+          >
             <TreeSelectInTableInsideForm />
           </Card>
-        </Content>
-      </Header>
+        </Layout.Content>
+      </Layout>
     </Layout>
   );
 }
